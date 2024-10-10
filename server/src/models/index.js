@@ -6,6 +6,15 @@ const { Attack } = require("./Attack.js");
 
 // set up the associations here
 
+Deck.belongsTo(User);
+User.hasOne(Deck);
+
+Card.belongsTo(Deck);
+Deck.hasMany(Crads);
+
+Card.belongsToMany(Attack, {through: "card-attack"});
+Attack.belongsToMany(Card, {through: "card-attack"});
+
 
 
 // and then export them all below

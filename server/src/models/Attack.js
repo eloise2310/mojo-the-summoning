@@ -11,4 +11,4 @@ const Attack = sequelize.define("attack", {
 })
 
 
-module.exports = Attack;
+module.exports = {Attack};

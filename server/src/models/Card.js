@@ -1,7 +1,7 @@
 // create your Card model here
 
 const { sequelize } = require("../db/config.js");
-const { Sequelize, DataTypes, INTEGER } = require("sequelize");
+const { Sequelize, DataTypes } = require("sequelize");
 
 const Card = sequelize.define("card", {
     id: DataTypes.INTEGER,
@@ -12,4 +12,4 @@ const Card = sequelize.define("card", {
 })
 
 
-module.exports = Card;
+module.exports = {Card};

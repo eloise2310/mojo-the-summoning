@@ -10,4 +10,4 @@ const Deck = sequelize.define("deck", {
 })
 
 
-module.exports = Deck;
+module.exports = {Deck};
