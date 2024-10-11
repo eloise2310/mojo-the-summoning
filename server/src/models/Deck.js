@@ -4,9 +4,19 @@ const { sequelize } = require("../db/config.js");
 const { Sequelize, DataTypes } = require("sequelize");
 
 const Deck = sequelize.define("deck", {
-    id: DataTypes.INTEGER,
-    name: DataTypes.STRING,
-    xp: DataTypes.INTEGER
+    // id: {
+    //     type: DataTypes.INTEGER,
+    //     primaryKey: true,
+    //     autoIncrement: true
+    // },
+    name: {
+        type: DataTypes.STRING,
+        allowNull:false
+    },
+    xp: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0
+    }
 })
 
 

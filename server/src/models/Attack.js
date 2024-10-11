@@ -1,14 +1,25 @@
 // create your Attack model here
-
 const { sequelize } = require("../db/config.js");
-const { Sequelize, DataTypes } = require("sequelize");
+const { DataTypes } = require("sequelize");
 
 const Attack = sequelize.define("attack", {
-    id: DataTypes.INTEGER,
-    title: DataTypes.STRING,
-    mojoCost: DataTypes.INTEGER,
-    staminaCost: DataTypes.INTEGER
-})
+    // id: {
+    //     type: DataTypes.INTEGER,
+    //     primaryKey: true,  
+    //     autoIncrement: true  
+    // },
+    title: {
+        type: DataTypes.STRING,
+        allowNull: false  
+    },
+    mojoCost: {
+        type: DataTypes.INTEGER,
+        allowNull: false  
+    },
+    staminaCost: {
+        type: DataTypes.INTEGER,
+        allowNull: false  
+    }
+});
 
-
-module.exports = {Attack};
+module.exports = { Attack };
